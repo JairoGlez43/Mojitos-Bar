@@ -1,5 +1,7 @@
+import NavBar from "./components/Navbar";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
+import Hero from "./components/Hero";
 
 
 gsap.registerPlugin(ScrollTrigger,SplitText)
@@ -7,9 +9,11 @@ gsap.registerPlugin(ScrollTrigger,SplitText)
 function App() {
   
   return (
-    <>
-      <h1 className="text-4xl">App</h1>
-    </>
+    <main>
+      <NavBar />
+      <Hero />
+      <section style={{ height: "200vh" }} />
+    </main>
   )
 }
 
