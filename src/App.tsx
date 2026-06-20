@@ -2,6 +2,7 @@ import NavBar from "./components/Navbar";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import Hero from "./components/Hero";
+import Cocktails from "./components/Cocktails";
 
 
 gsap.registerPlugin(ScrollTrigger,SplitText)
@@ -12,7 +13,7 @@ function App() {
     <main>
       <NavBar />
       <Hero />
-      <section style={{ height: "200vh" }} />
+      <Cocktails />
     </main>
   )
 }
