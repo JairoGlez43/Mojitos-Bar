@@ -65,7 +65,7 @@ const Hero = ()=> {
                 
                 tl.to(video, {
                     currentTime: video.duration,
-                    scale: 0.9,
+                    scale: 1,
                     ease: 'none',
                 });
             };
