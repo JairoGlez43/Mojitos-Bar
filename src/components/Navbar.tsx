@@ -11,13 +11,13 @@ const NavBar = () => {
                 start: 'bottom top',
             }
         })
-        navTweens.fromTo('nav', 
-            { backgroundColor: 'transparent' }, 
-            { 
-                backgroundColor: '#00000005', 
-                backdropFilter: 'blur(5px)',
-                duration: 1, 
-                ease: 'power1.inOut' 
+        navTweens.fromTo('nav',
+            { backgroundColor: 'transparent' },
+            {
+                backgroundColor: '#00000059',
+                backdropFilter: 'blur(10px)',
+                duration: 1,
+                ease: 'power1.inOut'
             },
         );
     })
@@ -25,9 +25,9 @@ const NavBar = () => {
     return (
         <nav>
             <div>
-                <a href="#home" className="flex items-center gap-2">
-                    <img src="/images/logo.png" alt="Logo" />
-                    <p>Velvet pour</p>
+                <a href="#hero" className="flex items-center gap-2">
+                    <img src="/images/logo.png" alt="" aria-hidden="true" />
+                    <p>Haze</p>
                 </a>
                 <ul>
                     {navLinks.map((link)=>(

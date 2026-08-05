@@ -1,6 +1,7 @@
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
+import { profileLists } from "../../constants";
 
 const About = () => {
     
@@ -29,7 +30,7 @@ const About = () => {
     
     return (
         <section id='about'>
-            <div className="mb-16" md:px-0 px-5>
+            <div className="mb-16 md:px-0 px-5">
                 <div className="content">
                     <div className='col-span-8'>
                         <p className = 'badge'>Best cocktails</p>
@@ -39,38 +40,51 @@ const About = () => {
                         <p>
                             Every cocktail is crafted with precision and passion, ensuring a unique taste experience that lingers long after the last sip.
                         </p>
-                        <p className='md-text-3xl text-xl font-bold'>
-                            <span>4.5</span>/5
-                        </p>
-                        <p className='text-sm text-white-100'>
-                            More than 1,000+ satisfied customers.
-                        </p>
+                        <div>
+                            <div className='flex flex-row justify-start gap-0 -space-x-3 items-center'>
+                                {profileLists.map((profile) => (
+                                    <img
+                                        key={profile.imgPath}
+                                        src={profile.imgPath}
+                                        alt=''
+                                        aria-hidden='true'
+                                        className='size-10 rounded-full border-2 border-black object-cover'
+                                    />
+                                ))}
+                            </div>
+                            <p className='md:text-3xl text-xl font-bold'>
+                                <span>4.5</span>/5
+                            </p>
+                            <p className='text-sm text-white-100'>
+                                More than 1,000+ satisfied customers.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className='top-grid'>
                 <div className='md:col-span-3'>
                     <div className ='noisy' />
-                    <img src='images/abt1.png' alt="grid-img-1" />
+                    <img src='/images/abt1.png' alt="grid-img-1" />
                 </div>
                 <div className='md:col-span-6'>
                     <div className ='noisy' />
-                    <img src='images/abt2.png' alt="grid-img-2" />
+                    <img src='/images/abt2.png' alt="grid-img-2" />
                 </div>
                 <div className='md:col-span-3'>
                     <div className ='noisy' />
-                    <img src='images/abt5.png' alt="grid-img-5" />
+                    <img src='/images/abt5.png' alt="grid-img-5" />
                 </div>    
                 
             </div>
             <div className='bottom-grid'>    
                 <div className='md:col-span-8'>
                     <div className ='noisy' />
-                    <img src='images/abt3.png' alt="grid-img-2" />
+                    <img src='/images/abt3.png' alt="grid-img-2" />
                 </div>
                 <div className='md:col-span-4'>
                     <div className ='noisy' />
-                    <img src='images/abt4.png' alt="grid-img-4" />
+                    <img src='/images/abt4.png' alt="grid-img-4" />
                 </div>
             </div>    
         </section>
